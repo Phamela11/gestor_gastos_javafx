@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" prefHeight="449.0" prefWidth="674.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.paywise.VistaRegistroController">
+   <children>
+      <Pane layoutX="7.0" layoutY="-4.0" prefHeight="457.0" prefWidth="667.0" style="-fx-background-color: black;">
+         <children>
+            <Pane layoutX="-7.0" prefHeight="457.0" prefWidth="364.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-text-fill: #2c3e50;">
+               <children>
+                  <TextField fx:id="txtUsuario" layoutX="52.0" layoutY="146.0" prefHeight="27.0" prefWidth="247.0" promptText="Cree un nombre de usuario" style="-fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #bdc3c7; -fx-border-width: 1;" />
+                  <TextField fx:id="txtEmail" layoutX="52.0" layoutY="200.0" prefHeight="27.0" prefWidth="247.0" promptText="Ingrese su correo " style="-fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #bdc3c7; -fx-border-width: 1;" />
+                  <Label layoutX="115.0" layoutY="51.0" style="-fx-font-size: 32; -fx-font-weight: bold;" text="PayWise" textAlignment="CENTER" />
+                  <Label layoutX="64.0" layoutY="98.0" style="-fx-text-fill: #7f8c8d;" text="Únete y comienza a gestionar tus finanzas" />
+                  <Label layoutX="52.0" layoutY="123.0" style="-fx-font-size: 14; -fx-font-weight: bold;" text="Usuario:" />
+                  <Label layoutX="53.0" layoutY="180.0" style="-fx-font-size: 14; -fx-font-weight: bold;" text="Email:" />
+                  <Button fx:id="btnRegistrar" onAction="#handleRegistrar" layoutX="52.0" layoutY="366.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="108.0" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand; -fx-background-radius: 5;" text="Crear Cuenta" textAlignment="CENTER" />
+                  <Button fx:id="btnLimpiar" onAction="#handleLimpiar" layoutX="187.0" layoutY="366.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="108.0" style="-fx-background-color: #95a5a6; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5; -fx-cursor: hand;" text="Limpiar" />
+                  <Label layoutX="52.0" layoutY="233.0" style="-fx-font-size: 14; -fx-font-weight: bold;" text="Contraseña" />
+                  <PasswordField fx:id="txtPassword" layoutX="52.0" layoutY="253.0" prefHeight="27.0" prefWidth="247.0" promptText="cree una contraseña" style="-fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #bdc3c7; -fx-border-width: 1;" />
+                  <PasswordField fx:id="txtConfirmarPassword" layoutX="52.0" layoutY="308.0" prefHeight="27.0" prefWidth="247.0" promptText="Confirme su contraseña" style="-fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #bdc3c7; -fx-border-width: 1;" />
+                  <Label layoutX="53.0" layoutY="288.0" style="-fx-font-size: 14; -fx-font-weight: bold;" text="Confirmar contraseña" />
+                  <Label fx:id="lblMensaje" alignment="CENTER" style="-fx-text-fill: #e74c3c; -fx-font-size: 11;" text="" />
+                  <Hyperlink onAction="#volverAlLogin" layoutX="115.0" layoutY="406.0" text="¿Ya tienes cuenta?" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
