@@ -1,6 +1,11 @@
-com\mycompany\paywise\VistaRegistroController.class
+com\mycompany\paywise\VistaCategoriaController.class
+com\mycompany\paywise\VistaDashboardController.class
+com\mycompany\paywise\ModalConfirmarEliminacionController.class
 module-info.class
 com\mycompany\paywise\App.class
+com\mycompany\paywise\ModalAgregarCategoriaController.class
 com\mycompany\paywise\VistaPrincipalController.class
+com\mycompany\paywise\ModalEditarCategoriaController.class
+com\mycompany\paywise\UsuarioLogueado.class
 Clases\CConexion.class
-com\mycompany\paywise\VistaDashboardController.class
+com\mycompany\paywise\VistaRegistroController.class

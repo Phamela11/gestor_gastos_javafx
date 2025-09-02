@@ -150,7 +150,7 @@ public class VistaPrincipalController implements Initializable {
             Connection conn = conexion.EstablecerConexion();
             if (conn != null && !conn.isClosed()) {
                 // Usar la estructura correcta de tu tabla
-                String sql = "SELECT * FROM usuario WHERE nombre_usuario = ? AND contrasena = ?";
+                String sql = "SELECT id_usuario, nombre_usuario, correo FROM usuario WHERE nombre_usuario = ? AND contrasena = ?";
                 PreparedStatement ps = conn.prepareStatement(sql);
                 ps.setString(1, usuario);
                 ps.setString(2, password);
@@ -161,16 +161,27 @@ public class VistaPrincipalController implements Initializable {
                 ResultSet rs = ps.executeQuery();
                 boolean autenticado = rs.next();
                 
+                if (autenticado) {
+                    // Obtener los datos del usuario
+                    int idUsuario = rs.getInt("id_usuario");
+                    String nombreUsuario = rs.getString("nombre_usuario");
+                    String correo = rs.getString("correo");
+                    
+                    // Almacenar la información del usuario logueado
+                    UsuarioLogueado usuarioLogueado = UsuarioLogueado.getInstancia();
+                    usuarioLogueado.establecerUsuario(idUsuario, nombreUsuario, correo, nombreUsuario); // Usar nombreUsuario como nombreCompleto
+                    
+                    System.out.println("✅ Usuario autenticado: " + nombreUsuario);
+                    System.out.println("✅ ID Usuario: " + idUsuario);
+                    System.out.println("✅ Correo: " + correo);
+                } else {
+                    System.out.println("❌ Autenticación fallida para: " + usuario);
+                }
+                
                 rs.close();
                 ps.close();
                 
                 System.out.println("🔍 Resultado de autenticación: " + autenticado);
-                
-                if (autenticado) {
-                    System.out.println("✅ Usuario autenticado: " + usuario);
-                } else {
-                    System.out.println("❌ Autenticación fallida para: " + usuario);
-                }
                 
                 return autenticado;
             } else {

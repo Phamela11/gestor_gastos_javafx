@@ -5,31 +5,65 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
 <AnchorPane id="AnchorPane" prefHeight="449.0" prefWidth="674.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.paywise.VistaRegistroController">
    <children>
-      <Pane layoutX="7.0" layoutY="-4.0" prefHeight="457.0" prefWidth="667.0" style="-fx-background-color: black;">
+      <Pane layoutX="-12.0" maxHeight="600.0" maxWidth="1000.0" minHeight="600.0" minWidth="1000.0" prefHeight="6000.0" prefWidth="1000.0" style="-fx-background-color: radial-gradient(center 50% 50%, radius 80%, #26658C, #023859, #011c40);">
          <children>
-            <Pane layoutX="-7.0" prefHeight="457.0" prefWidth="364.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-text-fill: #2c3e50;">
+            <Pane layoutX="54.0" layoutY="39.0" prefHeight="521.0" prefWidth="394.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-text-fill: #2c3e50; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 15, 0, 6, 6);">
                <children>
-                  <TextField fx:id="txtUsuario" layoutX="52.0" layoutY="146.0" prefHeight="27.0" prefWidth="247.0" promptText="Cree un nombre de usuario" style="-fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #bdc3c7; -fx-border-width: 1;" />
-                  <TextField fx:id="txtEmail" layoutX="52.0" layoutY="200.0" prefHeight="27.0" prefWidth="247.0" promptText="Ingrese su correo " style="-fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #bdc3c7; -fx-border-width: 1;" />
-                  <Label layoutX="115.0" layoutY="51.0" style="-fx-font-size: 32; -fx-font-weight: bold;" text="PayWise" textAlignment="CENTER" />
-                  <Label layoutX="64.0" layoutY="98.0" style="-fx-text-fill: #7f8c8d;" text="Únete y comienza a gestionar tus finanzas" />
-                  <Label layoutX="52.0" layoutY="123.0" style="-fx-font-size: 14; -fx-font-weight: bold;" text="Usuario:" />
-                  <Label layoutX="53.0" layoutY="180.0" style="-fx-font-size: 14; -fx-font-weight: bold;" text="Email:" />
-                  <Button fx:id="btnRegistrar" onAction="#handleRegistrar" layoutX="52.0" layoutY="366.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="108.0" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand; -fx-background-radius: 5;" text="Crear Cuenta" textAlignment="CENTER" />
-                  <Button fx:id="btnLimpiar" onAction="#handleLimpiar" layoutX="187.0" layoutY="366.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="108.0" style="-fx-background-color: #95a5a6; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5; -fx-cursor: hand;" text="Limpiar" />
-                  <Label layoutX="52.0" layoutY="233.0" style="-fx-font-size: 14; -fx-font-weight: bold;" text="Contraseña" />
-                  <PasswordField fx:id="txtPassword" layoutX="52.0" layoutY="253.0" prefHeight="27.0" prefWidth="247.0" promptText="cree una contraseña" style="-fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #bdc3c7; -fx-border-width: 1;" />
-                  <PasswordField fx:id="txtConfirmarPassword" layoutX="52.0" layoutY="308.0" prefHeight="27.0" prefWidth="247.0" promptText="Confirme su contraseña" style="-fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #bdc3c7; -fx-border-width: 1;" />
-                  <Label layoutX="53.0" layoutY="288.0" style="-fx-font-size: 14; -fx-font-weight: bold;" text="Confirmar contraseña" />
-                  <Label fx:id="lblMensaje" alignment="CENTER" style="-fx-text-fill: #e74c3c; -fx-font-size: 11;" text="" />
-                  <Hyperlink onAction="#volverAlLogin" layoutX="115.0" layoutY="406.0" text="¿Ya tienes cuenta?" />
+                  <Label layoutX="148.0" layoutY="82.0" style="-fx-font-size: 36; -fx-font-weight: bold; -fx-font-family: 'Segoe UI';" text="PayWise" textAlignment="CENTER" textFill="#023859" />
+                  <TextField fx:id="txtUsuario" layoutX="63.0" layoutY="148.0" prefHeight="38.0" prefWidth="259.0" promptText="Crea un nombre de usuario" style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: transparent transparent #5b86e5 transparent; -fx-border-width: 1.5; -fx-font-size: 14; -fx-padding: 8 12; -fx-background-color: transparent,white;" />
+                  <TextField fx:id="txtEmail" layoutX="63.0" layoutY="208.0" prefHeight="40.0" prefWidth="259.0" promptText="Ingrese su correo" style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: transparent transparent #5b86e5 transparent; -fx-border-width: 1.5; -fx-font-size: 14; -fx-padding: 8 12; -fx-background-color: transparent,white;" />
+                  <PasswordField fx:id="txtPassword" layoutX="65.0" layoutY="270.0" prefHeight="40.0" prefWidth="259.0" promptText="Crea una contraseña" style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: transparent transparent #5b86e5 transparent; -fx-border-width: 1.5; -fx-font-size: 14; -fx-padding: 8 12; -fx-background-color: transparent,white;" />
+                  <PasswordField fx:id="txtConfirmarPassword" layoutX="65.0" layoutY="332.0" prefHeight="40.0" prefWidth="259.0" promptText="Confirmar contraseña" style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: transparent transparent #5b86e5 transparent; -fx-border-width: 1.5; -fx-font-size: 14; -fx-padding: 8 12; -fx-background-color: transparent,white;" />
+                  
+                  <!-- Mensaje de estado -->
+                  <Label fx:id="lblMensaje" alignment="CENTER" layoutX="63.0" layoutY="380.0" prefHeight="20.0" prefWidth="259.0" style="-fx-text-fill: #e74c3c; -fx-font-size: 12;" text="" />
+                  
+                  <!-- Botones -->
+                  <Button fx:id="btnRegistrar" layoutX="133.0" layoutY="410.0" mnemonicParsing="false" onAction="#handleRegistrar" prefHeight="38.0" prefWidth="123.0" style="-fx-background-color: linear-gradient(to right, #26658c, #023859); -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand; -fx-background-radius: 8; -fx-font-size: 14; -fx-font-family: 'Segoe UI'; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 2, 2);" text="Registrar" textAlignment="CENTER" />
+                  
+                  <!-- Enlace para volver al login -->
+                  <Hyperlink layoutX="92.0" layoutY="464.0" onAction="#volverAlLogin" style="-fx-font-size: 14; -fx-font-family: 'Segoe UI'; -fx-text-fill: #3498db;" text="¿Ya tienes cuenta? Inicia sesión" />
+                  
+                  <!-- Logo -->
+                  <ImageView fitHeight="56.0" fitWidth="78.0" layoutX="186.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/Recurso%205@4x.png" />
+                     </image>
+                  </ImageView>
+                  
+                  <!-- Campo Confirmar Contraseña -->
+                  <Label layoutX="77.0" layoutY="322.0" style="-fx-font-size: 14; -fx-font-weight: bold;" text="Confirmar contraseña" textFill="#1a72a1" />
+                  
+                  <!-- Campo Contraseña -->
+                  <Label layoutX="75.0" layoutY="260.0" style="-fx-font-size: 14; -fx-font-weight: bold;" text="Contraseña" textFill="#1a72a1" />
+                  
+                  <!-- Campo Email -->
+                  <Label layoutX="82.0" layoutY="198.0" style="-fx-font-size: 14; -fx-font-weight: bold;" text="Email" textFill="#1a72a1" />
+                  
+                  <!-- Campo Usuario -->
+                  <Label layoutX="75.0" layoutY="137.0" style="-fx-font-size: 14; -fx-font-weight: bold;" text="Usuario" textFill="#1a72a1" />
                </children>
             </Pane>
+            
+            <!-- Imagen lateral -->
+            <ImageView fitHeight="296.0" fitWidth="297.0" layoutX="577.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/Online%20ads-amico.png" />
+               </image>
+            </ImageView>
+            
+            <!-- Textos informativos -->
+            <Label layoutX="622.0" layoutY="493.0" style="-fx-font-family: 'Segoe UI'; -fx-font-weight: bold; -fx-font-size: 16;" text="¡Haz que cada peso cuente!" textFill="WHITE" />
+            <Label layoutX="509.0" layoutY="95.0" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 17; -fx-line-spacing: 1.2;" text="Gestiona tus ingresos y gastos de manera inteligente con " textFill="WHITE" />
+            <Label layoutX="562.0" layoutY="117.0" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 17; -fx-line-spacing: 1.2;" text="nuestra plataforma moderna y fácil de usar." textFill="WHITE" />
+            <Label fx:id="title_label" layoutX="554.0" layoutY="53.0" style="-fx-font-size: 34; -fx-font-weight: bold; -fx-font-family: 'Segoe UI'; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 8, 0, 3, 3);" text="Controla tus Finanzas" textFill="WHITE" />
          </children>
       </Pane>
    </children>

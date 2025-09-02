@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="829.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.paywise.VistaCategoriaController">
+   <children>
+      <Pane layoutX="52.0" layoutY="114.0" prefHeight="238.0" prefWidth="348.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 10; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 10, 0, 0, 4); -fx-border-color: #B8B3BE; -fx-border-radius: 10;">
+         <children>
+            <ScrollPane fx:id="scrollPaneIngresos" fitToWidth="true" layoutX="10.0" layoutY="10.0" prefHeight="218.0" prefWidth="328.0" style="-fx-background: transparent; -fx-background-color: transparent;">
+               <content>
+                  <VBox fx:id="vboxCategoriasIngresos" spacing="10.0" style="-fx-background-color: transparent;" />
+               </content>
+            </ScrollPane>
+         </children>
+      </Pane>
+      <Pane layoutX="52.0" layoutY="372.0" prefHeight="137.0" prefWidth="728.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 10; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 10, 0, 0, 4); -fx-border-color: #B8B3BE; -fx-border-radius: 10;">
+         <children>
+            <Label fx:id="lblTotalCategorias" layoutX="110.0" layoutY="51.0" text="0" textFill="black">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="57.0" layoutY="81.0" text="Total de Categorías" textFill="#7f8c8d">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblCategoriasIngresos" layoutX="334.0" layoutY="51.0" text="0" textFill="#56c969">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="281.0" layoutY="81.0" text="Categorías de ingresos" textFill="#7f8c8d">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblCategoriasGastos" layoutX="558.0" layoutY="51.0" text="0" textFill="#d53f3f">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="505.0" layoutY="81.0" text="Categorías de gastos" textFill="#7f8c8d">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <Pane layoutX="432.0" layoutY="114.0" prefHeight="238.0" prefWidth="348.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 10; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 10, 0, 0, 4); -fx-border-color: #B8B3BE; -fx-border-radius: 10;">
+         <children>
+            <ScrollPane fx:id="scrollPaneGastos" fitToWidth="true" layoutX="10.0" layoutY="10.0" prefHeight="218.0" prefWidth="328.0" style="-fx-background: transparent; -fx-background-color: transparent;">
+               <content>
+                  <VBox fx:id="vboxCategoriasGastos" spacing="10.0" style="-fx-background-color: transparent;" />
+               </content>
+            </ScrollPane>
+         </children>
+      </Pane>
+      <Label layoutX="52.0" layoutY="14.0" style="-fx-font-weight: bold;" text="Categorías">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="52.0" layoutY="46.0" style="-fx-text-fill: #7f8c8d;" text="Organiza tus transacciones por categorías" />
+      <Button fx:id="btnAgregarCategoria" layoutX="635.0" layoutY="30.0" mnemonicParsing="false" onAction="#abrirModalAgregarCategoria" prefHeight="32.0" prefWidth="145.0" style="-fx-background-color: #2a6f97; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 2, 2); -fx-font-weight: bold;" text="Agregar Categoría" textFill="WHITE" />
+      <Label layoutX="453.0" layoutY="81.0" text="Categorías de Gastos" textFill="#d53f3f">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="17.0" fitWidth="21.0" layoutX="432.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/etiqueta%20(1).png" />
+         </image>
+      </ImageView>
+      <Label layoutX="76.0" layoutY="81.0" text="Categorías de Ingresos" textFill="#56c969">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="17.0" fitWidth="21.0" layoutX="52.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/etiqueta.png" />
+         </image>
+      </ImageView>
+      <!-- Resumen de Categorías -->
+      <Label layoutX="76.0" layoutY="390.0" text="Resumen de Categorías" textFill="#2c3e50">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

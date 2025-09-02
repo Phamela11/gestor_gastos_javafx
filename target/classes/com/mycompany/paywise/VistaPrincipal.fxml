@@ -5,26 +5,42 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.paywise.VistaPrincipalController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.paywise.VistaPrincipalController">
    <children>
-      <Pane layoutX="-3.0" layoutY="-14.0" prefHeight="460.0" prefWidth="668.0" style="-fx-background-color: black;">
+      <Pane layoutX="-22.0" maxHeight="600.0" maxWidth="1000.0" minHeight="600.0" minWidth="1000.0" prefHeight="6000.0" prefWidth="1000.0" style="-fx-background-color: radial-gradient(center 50% 50%, radius 80%, #26658C, #023859, #011c40);">
          <children>
-            <Pane prefHeight="460.0" prefWidth="353.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-text-fill: #2c3e50;">
+            <Pane layoutX="54.0" layoutY="39.0" prefHeight="521.0" prefWidth="394.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-text-fill: #2c3e50; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 15, 0, 6, 6);">
                <children>
-                  <Label layoutX="124.0" layoutY="82.0" style="-fx-font-size: 32; -fx-font-weight: bold;" text="PayWise" textAlignment="CENTER" />
-                  <Label layoutX="73.0" layoutY="129.0" style="-fx-text-fill: #7f8c8d;" text="Ingrese sus credenciales para continuar" />
-                  <Label layoutX="52.0" layoutY="169.0" style="-fx-font-size: 14; -fx-font-weight: bold;" text="Usuario:" />
-                  <TextField fx:id="txtUsuario" layoutX="52.0" layoutY="192.0" prefHeight="27.0" prefWidth="247.0" promptText="Ingrese su usuario..." style="-fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #bdc3c7; -fx-border-width: 1;" />
-                  <Label layoutX="52.0" layoutY="229.0" style="-fx-font-size: 14; -fx-font-weight: bold;" text="Contraseña:" />
-                  <PasswordField fx:id="txtPassword" layoutX="52.0" layoutY="252.0" prefHeight="27.0" prefWidth="247.0" promptText="Ingrese su contraseña..." style="-fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #bdc3c7; -fx-border-width: 1;" />
+                  <Label layoutX="126.0" layoutY="128.0" style="-fx-font-size: 36; -fx-font-weight: bold; -fx-font-family: 'Segoe UI';" text="PayWise" textAlignment="CENTER" textFill="#023859" />
+                  <Label layoutX="67.0" layoutY="171.0" style="-fx-text-fill: #7f8c8d; -fx-font-size: 15; -fx-font-family: 'Segoe UI';" text="Ingrese sus credenciales para continuar" />
+                  <Label layoutX="66.0" layoutY="213.0" style="-fx-font-size: 14; -fx-font-weight: bold;" text="Usuario:" textFill="#2a7aa8" />
+                  <TextField fx:id="txtUsuario" layoutX="66.0" layoutY="235.0" prefHeight="38.0" prefWidth="259.0" promptText="Ingrese su usuario..." style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: transparent transparent #5b86e5 transparent; -fx-border-width: 1.5; -fx-font-size: 14; -fx-padding: 8 12; -fx-background-color: transparent,white;" styleClass="txtUsuario" stylesheets="@style.css" />
+                  <Label layoutX="66.0" layoutY="283.0" style="-fx-font-size: 14; -fx-font-weight: bold;" text="Contraseña:" textFill="#1a72a1" />
+                  <PasswordField fx:id="txtPassword" layoutX="66.0" layoutY="305.0" prefHeight="38.0" prefWidth="259.0" promptText="Ingrese su contraseña..." style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: transparent transparent #5b86e5 transparent; -fx-border-width: 1.5; -fx-font-size: 14; -fx-padding: 8 12; -fx-background-color: transparent,white;" />
                   <Label fx:id="lblMensaje" alignment="CENTER" style="-fx-text-fill: #e74c3c; -fx-font-size: 12;" text="" />
-                  <Button fx:id="btnLogin" layoutX="52.0" layoutY="303.0" mnemonicParsing="false" onAction="#handleLogin" prefHeight="27.0" prefWidth="108.0" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand; -fx-background-radius: 5;" text="Iniciar Sesión" textAlignment="CENTER" />
-                  <Button fx:id="btnLimpiar" layoutX="191.0" layoutY="303.0" mnemonicParsing="false" onAction="#handleLimpiar" prefHeight="27.0" prefWidth="108.0" style="-fx-background-color: #95a5a6; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5; -fx-cursor: hand;" text="Limpiar" />
-                  <Hyperlink layoutX="79.0" layoutY="348.0" onAction="#abrirRegistro" text="¿No tienes cuenta? Crear Cuenta" />
+                  <Button fx:id="btnLogin" layoutX="66.0" layoutY="381.0" mnemonicParsing="false" onAction="#handleLogin" prefHeight="38.0" prefWidth="120.0" style="-fx-background-color: linear-gradient(to right, #26658c, #023859); -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand; -fx-background-radius: 8; -fx-font-size: 14; -fx-font-family: 'Segoe UI'; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 2, 2);" text="Iniciar Sesión" textAlignment="CENTER" />
+                  <Button fx:id="btnLimpiar" layoutX="205.0" layoutY="381.0" mnemonicParsing="false" onAction="#handleLimpiar" prefHeight="38.0" prefWidth="120.0" style="-fx-background-color: linear-gradient(to right, #54ACBF, #26658c); -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-cursor: hand; -fx-font-size: 14; -fx-font-family: 'Segoe UI'; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 2, 2);" text="Limpiar" />
+                  <Hyperlink layoutX="91.0" layoutY="443.0" onAction="#abrirRegistro" style="-fx-font-size: 14; -fx-font-family: 'Segoe UI'; -fx-text-fill: #3498db;" text="¿No tienes cuenta? Crear Cuenta" />
+                  <ImageView fitHeight="56.0" fitWidth="78.0" layoutX="164.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/Recurso%205@4x.png" />
+                     </image>
+                  </ImageView>
                </children></Pane>
+            <ImageView fitHeight="296.0" fitWidth="297.0" layoutX="577.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/Online%20ads-amico.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="622.0" layoutY="493.0" style="-fx-font-family: 'Segoe UI'; -fx-font-weight: bold; -fx-font-size: 16;" text="¡Haz que cada peso cuente!" textFill="WHITE" />
+            <Label layoutX="509.0" layoutY="95.0" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 17; -fx-line-spacing: 1.2;" text="Gestiona tus ingresos y gastos de manera inteligente con " textFill="WHITE" />
+            <Label layoutX="562.0" layoutY="117.0" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 17; -fx-line-spacing: 1.2;" text="nuestra plataforma moderna y fácil de usar." textFill="WHITE" />
+            <Label fx:id="title_label" layoutX="554.0" layoutY="53.0" style="-fx-font-size: 34; -fx-font-weight: bold; -fx-font-family: 'Segoe UI'; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 8, 0, 3, 3);" text="Controla tus Finanzas" textFill="WHITE" />
          </children></Pane>
    </children>
 </AnchorPane>
