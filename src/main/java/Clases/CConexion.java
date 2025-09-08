@@ -29,7 +29,7 @@ public class CConexion {
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             conectar = DriverManager.getConnection(url, usuario, contraseña);
-            Alerta("Conexión exitosa", "Conexión exitosa",Alert.AlertType.INFORMATION);
+            //Alerta("Conexión exitosa", "Conexión exitosa",Alert.AlertType.INFORMATION);
         }catch(Exception e){
             Alerta("Error de conexión", "Error de conexión: " + e.getMessage(),Alert.AlertType.ERROR);
         }

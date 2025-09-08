@@ -198,11 +198,12 @@ public class VistaPrincipalController implements Initializable {
     }
     
     private void mostrarMensaje(String mensaje, boolean esError) {
-        lblMensaje.setText(mensaje);
+        
+        //lblMensaje.setText(mensaje);
         if (esError) {
             lblMensaje.setTextFill(Color.RED);
         } else {
-            lblMensaje.setTextFill(Color.GREEN);
+            //lblMensaje.setTextFill(Color.GREEN);
         }
     }
     
