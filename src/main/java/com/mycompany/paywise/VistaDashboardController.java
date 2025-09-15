@@ -51,12 +51,16 @@ public class VistaDashboardController implements Initializable {
 
     @FXML
     private void Transaccion_click(MouseEvent event) {
-        loadPage("reporte");
+        loadPage("transaccion");
     }
-
+ 
     @FXML
     private void Reporte_click(MouseEvent event) {
-        loadPage("transaccion");
+        loadPage("reporte");
+    }
+    
+    private void perfil_click(MouseEvent event){
+        loadPage("vistaPerfil");
     }
     
     private void loadPage(String page){

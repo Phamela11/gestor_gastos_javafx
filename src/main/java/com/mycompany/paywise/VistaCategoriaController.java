@@ -89,8 +89,8 @@ public class VistaCategoriaController implements Initializable {
             modalStage.setTitle("Agregar Categoría - " + usuarioLogueado.getNombreUsuario());
             modalStage.setScene(scene);
             modalStage.initModality(Modality.APPLICATION_MODAL);
-            modalStage.setResizable(false);
-            modalStage.centerOnScreen();
+            modalStage.setResizable(true);
+            modalStage.setMaximized(true);
             
             // Mostrar el modal
             modalStage.showAndWait();
@@ -262,8 +262,8 @@ public class VistaCategoriaController implements Initializable {
             modalStage.setTitle("Editar Categoría - " + usuarioLogueado.getNombreUsuario());
             modalStage.setScene(scene);
             modalStage.initModality(Modality.APPLICATION_MODAL);
-            modalStage.setResizable(false);
-            modalStage.centerOnScreen();
+            modalStage.setResizable(true);
+            modalStage.setMaximized(true);
             
             // Mostrar el modal
             modalStage.showAndWait();
@@ -297,8 +297,8 @@ public class VistaCategoriaController implements Initializable {
             modalStage.setTitle("Confirmar Eliminación - " + usuarioLogueado.getNombreUsuario());
             modalStage.setScene(scene);
             modalStage.initModality(Modality.APPLICATION_MODAL);
-            modalStage.setResizable(false);
-            modalStage.centerOnScreen();
+            modalStage.setResizable(true);
+            modalStage.setMaximized(true);
             
             // Mostrar el modal
             modalStage.showAndWait();

@@ -20,9 +20,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.Button;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 /**
  * FXML Controller class
  *
@@ -87,15 +84,9 @@ public class VistaRegistroController implements Initializable {
     @javafx.fxml.FXML
     private void volverAlLogin() {
         try {
-            // Cargar la vista de login
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("VistaPrincipal.fxml"));
-            Parent root = loader.load();
-            
-            // Obtener la escena actual
-            Stage stage = (Stage) btnRegistrar.getScene().getWindow();
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
+            // Usar el método setRoot de App.java para mantener la misma Scene maximizada
+            App.setRoot("VistaPrincipal");
+            System.out.println("✅ Login cargado exitosamente manteniendo ventana maximizada");
             
         } catch (Exception e) {
             System.err.println("Error al volver al login: " + e.getMessage());

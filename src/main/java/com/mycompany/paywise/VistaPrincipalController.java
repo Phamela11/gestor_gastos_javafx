@@ -122,15 +122,9 @@ public class VistaPrincipalController implements Initializable {
     @javafx.fxml.FXML
     private void abrirRegistro() {
         try {
-            // Cargar la vista de registro
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("VistaRegistro.fxml"));
-            Parent root = loader.load();
-            
-            // Obtener la escena actual
-            Stage stage = (Stage) btnLogin.getScene().getWindow();
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
+            // Usar el método setRoot de App.java para mantener la misma Scene maximizada
+            App.setRoot("VistaRegistro");
+            System.out.println("✅ Registro cargado exitosamente manteniendo ventana maximizada");
             
         } catch (Exception e) {
             System.err.println("Error al abrir registro: " + e.getMessage());
@@ -215,40 +209,9 @@ public class VistaPrincipalController implements Initializable {
         try {
             System.out.println("🔍 Iniciando apertura de ventana principal...");
             
-            // Verificar que el recurso existe
-            URL resourceUrl = getClass().getResource("VistaDashboard.fxml");
-            
-            if (resourceUrl == null) {
-                System.err.println("❌ No se pudo encontrar VistaDashboard.fxml");
-                mostrarMensaje("Error: No se encontró la vista principal", true);
-                return;
-            }
-            System.out.println("✅ Recurso FXML encontrado: " + resourceUrl);
-            
-            // Cargar la vista principal de la aplicación
-            System.out.println("🔍 Cargando FXML...");
-            FXMLLoader loader = new FXMLLoader(resourceUrl);
-            System.out.println("✅ FXMLLoader creado");
-            
-            Parent root = loader.load();
-            System.out.println("✅ FXML cargado exitosamente");
-            
-            // Obtener la escena actual
-            Stage stage = (Stage) btnLogin.getScene().getWindow();
-            System.out.println("✅ Stage obtenido: " + stage);
-            
-            Scene scene = new Scene(root);
-            System.out.println("✅ Scene creada");
-            
-            // Configurar pantalla completa
-            stage.setFullScreen(true);
-            System.out.println("✅ Pantalla completa configurada");
-            
-            stage.setScene(scene);
-            System.out.println("✅ Scene asignada al stage");
-            
-            stage.show();
-            System.out.println("✅ Stage mostrado exitosamente");
+            // Usar el método setRoot de App.java para mantener la misma Scene maximizada
+            App.setRoot("VistaDashboard");
+            System.out.println("✅ Dashboard cargado exitosamente manteniendo ventana maximizada");
             
         } catch (Exception e) {
             System.err.println("❌ Error al abrir ventana principal: " + e.getMessage());

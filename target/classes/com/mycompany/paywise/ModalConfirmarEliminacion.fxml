@@ -13,7 +13,7 @@
          <children>
             <VBox alignment="CENTER" spacing="10.0">
                <children>
-                  <Label style="-fx-font-weight: bold; -fx-text-fill: #e74c3c;" text="⚠ Confirmar Eliminación">
+                  <Label style="-fx-font-weight: bold; -fx-text-fill: #e74c3c;" text="Confirmar Eliminación">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -27,7 +27,7 @@
             </VBox>
             <VBox alignment="CENTER" spacing="15.0" style="-fx-background-color: #f8f9fa; -fx-background-radius: 8; -fx-padding: 20; -fx-border-color: #e9ecef; -fx-border-radius: 8;">
                <children>
-                  <Label fx:id="lblNombreCategoria" style="-fx-font-weight: bold; -fx-text-fill: #2c3e50;" text="📋 Categoría: [Nombre]">
+                  <Label fx:id="lblNombreCategoria" style="-fx-font-weight: bold; -fx-text-fill: #2c3e50;" text=" Categoría: [Nombre]">
                      <font>
                         <Font size="16.0" />
                      </font>

@@ -20,8 +20,8 @@ public class App extends Application {
         scene = new Scene(loadFXML("VistaPrincipal"));
         stage.setScene(scene);
         
-        // Configurar ventana maximizada (ocupa toda la pantalla pero respeta la barra de tareas)
-        //stage.setMaximized(true);
+        // Configurar ventana maximizada (mantiene barra de título)
+        stage.setMaximized(true);
         
         stage.show();
     }

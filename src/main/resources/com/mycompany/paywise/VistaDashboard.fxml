@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane fx:id="bp" maxHeight="600.0" maxWidth="1000.0" minHeight="600.0" minWidth="1000.0" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.paywise.VistaDashboardController">
+<BorderPane fx:id="bp" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.paywise.VistaDashboardController">
    <top>
       <Pane prefHeight="51.0" prefWidth="1000.0" style="-fx-background-color: #223148;" BorderPane.alignment="CENTER">
          <children>
@@ -50,7 +50,7 @@
                <children>
                   <Label layoutX="26.0" layoutY="14.0" prefHeight="20.0" prefWidth="126.0" style="-fx-text-fill: white; -fx-font-size: 14;" text="Total Balance " textFill="WHITE" />
                   <Label layoutX="26.0" layoutY="40.0" style="-fx-font-size: 45; -fx-font-weight: bold; -fx-text-fill: white;" text="\$ 2.675.412" />
-                  <Button layoutX="26.0" layoutY="104.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="145.0" style="-fx-background-color: #065a82; -fx-background-radius: 10;" text="Nueva Transación" textAlignment="JUSTIFY" />
+                  <Button layoutX="26.0" layoutY="104.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="145.0" style="-fx-background-color: #065a82; -fx-background-radius: 10; -fx-text-fill: white; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 2, 2);" text="Nueva Transación" textAlignment="JUSTIFY" />
                   <Label layoutX="26.0" layoutY="169.0" style="-fx-text-fill: white; -fx-font-size: 14;" text="Actividad Reciente" />
                   <Pane layoutX="25.0" layoutY="194.0" prefHeight="209.0" prefWidth="461.0" style="-fx-border-color: #62b6cb; -fx-background-radius: 13; -fx-border-radius: 13;">
                      <children>
